@@ -6,15 +6,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
-    <title>Projekt Strony F1</title>
+    <title>F1 - WEBSITE!</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
     <style>
         body {
             font-family: 'Rajdhani', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f7f7f7;
+            line-height: 1.6;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .logo img {
+            width: 40px;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            transition: transform .2s;
         }
 
+        .logo:hover {
+              transform: scale(0.8);
+        }
         header {
             background-color: #333;
             color: #fff;
@@ -54,13 +73,29 @@
             max-width: 300px;
             margin: 10px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
         }
 
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 20px 0;
+        }
+        .social-icons a {
+          display: inline-block;
+          margin: 0 10px;
+        }
+
+        .social-icons img {
+          width: 30px;
+          height: 30px;
+          transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover img {
+          transform: scale(1.2);
         }
     </style>
 </head>
@@ -69,47 +104,30 @@
         <h1>Projekt Strony F1</h1>
     </header>
     <nav>
-        <a href="#aktualnosci">Aktualności</a>
-        <a href="#kalendarz">Kalendarz Wyścigów</a>
-        <a href="#statystyki">Statystyki i Wyniki</a>
-        <a href="#profile">Profile Kierowców i Zespołów</a>
-        <a href="#galeria">Galeria Zdjęć i Filmy</a>
-        <a href="#forum">Forum Społecznościowe</a>
-        <a href="#specjalne">Sekcje Specjalne</a>
+        <a href="/" class="logo"><img src="img/logof1.png" alt="Logo"></a>
+        <a href="/aktualnosci">Aktualności</a>
+        <a href="/kalendarz">Kalendarz Wyścigów</a>
+        <a href="/statystyki">Statystyki i Wyniki</a>
+        <a href="/profile">Profile Kierowców i Zespołów</a>
+        <a href="/galeria">Galeria Zdjęć i Filmy</a>
+        <a href="/forum">Forum Społecznościowe</a>
+        <a href="/tory">Tory</a>
     </nav>
-    <section id="aktualnosci">
-        <h2>Aktualności</h2>
-        <!-- Tutaj możesz dodać aktualności -->
-    </section>
-    <section id="kalendarz">
-        <h2>Kalendarz Wyścigów</h2>
-        <!-- Tutaj możesz dodać kalendarz wyścigów -->
-    </section>
-    <section id="statystyki">
-        <h2>Statystyki i Wyniki</h2>
-        <!-- Tutaj możesz dodać statystyki i wyniki -->
-    </section>
-    <section id="profile">
-        <h2>Profile Kierowców i Zespołów</h2>
-        <!-- Tutaj możesz dodać profile kierowców i zespołów -->
-    </section>
-    <section id="galeria">
-        <h2>Galeria Zdjęć i Filmy</h2>
-        <div class="image-container">
-            <img src="image/photo1.jpg" alt="Opis zdjęcia 1"> 
-            <img src="image/photo2.jpg" alt="Opis zdjęcia 2">
-            <img src="image/film1.mp4" controls>Opis filmu 1</video>
-        </div>
-    </section>
-    <section id="forum">
-        <h2>Forum Społecznościowe</h2>
-        <!-- Tutaj możesz dodać forum społecznościowe -->
-    </section>
-    <section id="specjalne">
-        <h2>Sekcje Specjalne</h2>
-        <!-- Tutaj możesz dodać sekcje specjalne -->
-    </section>
+
     <footer>
+         <div class="footer-container">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/twoj_profil" target="_blank">
+          <img src="instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/twoj_profil" target="_blank">
+          <img src="facebook-icon.png" alt="Facebook">
+        </a>
+        <a href="https://www.twitter.com/twoj_profil" target="_blank">
+          <img src="twitter-icon.png" alt="Twitter">
+        </a>
+      </div>
+    </div>
         &copy; 2023 Projekt Strony F1. Wszelkie prawa zastrzeżone.
     </footer>
 </body>
