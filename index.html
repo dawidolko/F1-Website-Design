@@ -1,134 +1,188 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
+
 <head>
+    <title>F1 - WEBSITE PROJECT!</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
-    <title>F1 - WEBSITE!</title>
-    <link rel="icon" type="image/png" href="image/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400&family=Victor+Mono:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <style>
         body {
-            font-family: 'Rajdhani', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-            line-height: 1.6;
-            justify-content: center;
-            align-items: center;
+            background-color: #f5f5f5;
+            font-family: 'Teko', sans-serif;
+            font-family: 'Victor Mono', monospace;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-        }
-        
-        .logo img {
-            width: 40px;
-        }
-        .logo {
-            width: 40px;
-            height: 40px;
-            transition: transform .2s;
+            margin: 0;
+            padding: 0;
         }
 
-        .logo:hover {
-              transform: scale(0.8);
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+        /* Reszta styli jak w poprzednim kodzie */
+
+        nav {
+            background-color: #222;
+            padding: 10px 0;
             text-align: center;
         }
 
-        nav {
-            background-color: #444;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            padding: 5px 0;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        nav a {
-            color: #fff;
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-size: 18px;
+            font-weight: bold;
             text-decoration: none;
-            padding: 10px 20px;
+            color: #ccc;
+            transition: color 0.3s, border-bottom-color 0.3s;
+            border-bottom: 2px solid transparent;
+            position: relative;
         }
 
-        nav a:hover {
-            background-color: #555;
+        nav ul li a:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
         }
 
-        section {
+        nav ul li a:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        nav ul li a:hover:before {
+            visibility: visible;
+            width: 100%;
+        }
+
+        nav ul li a.active {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .footer {
+            background-color: #222;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            margin-top: auto;
+            color: #fff;
+        }
+
+        /* Reszta styli jak w poprzednim kodzie */
+
+        /* Dodajemy tło dla sekcji galerii */
+        .gallery {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Dodajemy style dla zdjęć w galerii */
+        .gallery img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dodajemy style dla sekcji forum */
+        .forum {
             padding: 20px;
         }
 
-        .image-container {
+        .forum h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .forum p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Dodajemy style dla sekcji torów */
+        .tracks {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
-            justify-content: center;
+            padding: 20px;
+            gap: 20px;
         }
 
-        .image-container img {
-            max-width: 300px;
-            margin: 10px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            display: flex;
-            justify-content: center;
+        .tracks img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .social-icons a {
-          display: inline-block;
-          margin: 0 10px;
-        }
-
-        .social-icons img {
-          width: 30px;
-          height: 30px;
-          transition: transform 0.3s ease;
-        }
-
-        .social-icons a:hover img {
-          transform: scale(1.2);
-        }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Projekt Strony F1</h1>
-    </header>
     <nav>
-        <a href="/" class="logo"><img src="img/logof1.png" alt="Logo"></a>
-        <a href="/aktualnosci">Aktualności</a>
-        <a href="/kalendarz">Kalendarz Wyścigów</a>
-        <a href="/statystyki">Statystyki i Wyniki</a>
-        <a href="/profile">Profile Kierowców i Zespołów</a>
-        <a href="/galeria">Galeria Zdjęć i Filmy</a>
-        <a href="/forum">Forum Społecznościowe</a>
-        <a href="/tory">Tory</a>
+        <ul>
+            <li><a href="/aktualności">Aktualności</a></li>
+            <li><a href="/kalendarz">Kalendarz</a></li>
+            <li><a href="/statystki">Statystyki</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/galeria">Galeria</a></li>
+            <li><a href="/forum">Forum</a></li>
+            <li><a href="/tory">Tory</a></li>
+        </ul>
     </nav>
 
-    <footer>
-         <div class="footer-container">
-      <div class="social-icons">
-        <a href="https://www.instagram.com/twoj_profil" target="_blank">
-          <img src="instagram-icon.png" alt="Instagram">
-        </a>
-        <a href="https://www.facebook.com/twoj_profil" target="_blank">
-          <img src="facebook-icon.png" alt="Facebook">
-        </a>
-        <a href="https://www.twitter.com/twoj_profil" target="_blank">
-          <img src="twitter-icon.png" alt="Twitter">
-        </a>
-      </div>
+    <div class="profile social-media-background" data-aos="fade-in">
+        <!-- Twój kod z informacjami o Formule 1 i zdjęciem -->
     </div>
-        &copy; 2023 Projekt Strony F1. Wszelkie prawa zastrzeżone.
-    </footer>
+
+    <div class="skills">
+        <!-- Twój kod z linkami do sekcji "Aktualności", "Kalendarz", "Statystyki", "Profile", "Galeria", "Forum", "Tory" -->
+    </div>
+
+    <div class="gallery">
+        <h2>Galeria</h2>
+        <!-- Twój kod z galerią zdjęć -->
+    </div>
+
+    <div class="forum">
+        <h2>Forum</h2>
+        <!-- Twój kod z treścią forum -->
+    </div>
+
+    <div class="tracks">
+        <!-- Twój kod z obrazkami torów Formuły 1 -->
+    </div>
+
+    <div class="footer">
+        <p>© 2023 TwojeImięNazwisko - Wszelkie prawa zastrzeżone | <a href="https://www.facebook.com/">Facebook</a> | <a href="https://www.instagram.com/">Instagram</a> | <a href="https://twitter.com/">Twitter</a></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
