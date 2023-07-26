@@ -13,7 +13,7 @@ Oglądanie galerii zdjęć z wyścigów, kierowców i zespołów.
 Dyskutowanie na forum z innymi fanami Formuły 1.
 Subskrybowanie newslettera, aby otrzymywać najświeższe informacje na skrzynkę e-mail.
 
-##Funkcje
+## Funkcje
 Strona będzie zawierać następujące funkcje:
 
 Strona główna z aktualnościami i wydarzeniami.
