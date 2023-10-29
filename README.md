@@ -1,46 +1,45 @@
-# Projekt Strony Formuły 1
+# Formula1 Website Design
 
-## Opis
-Ten projekt to strona internetowa poświęcona tematyce Formuły 1, która ma na celu dostarczenie fanom tej ekscytującej dyscypliny sportu najważniejszych informacji, wiadomości, wyników oraz aktualności związanych z wyścigami Formuły 1.
+## Description
+This project is a website dedicated to Formula 1 topics, which aims to provide fans of this exciting sport with the most important information, news, results and updates related to Formula 1 racing.
 
-## Cel
-Głównym celem tego projektu jest stworzenie interaktywnej i intuicyjnej strony internetowej, która pozwoli użytkownikom na:
+## Purpose
+The main goal of this project is to create and share a website that allows users to:
 
-Przeglądanie aktualności i wiadomości związanych z Formułą 1.
-Sprawdzanie wyników, klasyfikacji i statystyk z bieżących i poprzednich sezonów.
-Zapoznanie się z opisami torów oraz wydarzeniami kalendarza Formuły 1.
-Oglądanie galerii zdjęć z wyścigów, kierowców i zespołów.
-Dyskutowanie na forum z innymi fanami Formuły 1.
-Subskrybowanie newslettera, aby otrzymywać najświeższe informacje na skrzynkę e-mail.
+Browse Formula 1 news and updates.
+Checking results, analysis and statistics of results and seasons.
+Familiarizing yourself with track descriptions and Formula 1 calendar events.
+View galleries of races, drivers and racers.
+Discussing on the forum with other Formula 1 fans.
+Subscribe to the newsletter to have the latest information delivered to your email inbox.
 
-## Funkcje
-Strona będzie zawierać następujące funkcje:
+## Functions
+The website will include features:
 
-Strona główna z aktualnościami i wydarzeniami.
-Zakładka z wynikami i klasyfikacjami kierowców oraz zespołów.
-Kalendarz wyścigów z możliwością dodawania wydarzeń do kalendarza użytkownika.
-Galeria zdjęć z podpisami i opcją udostępniania na mediach społecznościowych.
-Sekcja z opisami torów i informacjami o każdym Grand Prix.
-Forum dyskusyjne dla użytkowników.
-Formularz subskrypcji newslettera.
+Home page with news and events.
+Tab with results, driver classifications and drivers.
+Race calendar with races added to the user's calendar.
+Photo gallery with captions and social media spread.
+Section with track descriptions and provides information about each Grand Prix.
+Discussion forum for users.
+Newsletter form.
 
-## Technologie
-Do stworzenia strony użyjemy następujących technologii:
+## Technology
+To create the website we will use the following technologies:
 
-HTML, CSS i JavaScript do warstwy frontendowej.
-Framework backendowy (np. Django lub Node.js) do obsługi logiki aplikacji i interakcji z bazą danych.
-Baza danych (np. MySQL lub MongoDB) do przechowywania informacji o użytkownikach, wynikach, wiadomościach itp.
-Hosting na platformie chmurowej (np. AWS lub Heroku) dla dostępu do strony online.
+HTML, CSS and JavaScript for frontend maintenance.
+A backend framework (e.g. Django or Node.js) to handle application logic and analytics with the database.
+Database (e.g. MySQL or MongoDB) to store information about users, results, messages, etc.
+Cloud hosting (e.g. AWS or Heroku) for online website access.
 
-## Wkład w projekt
-Będziemy wdzięczni za wszelkie wsparcie w rozwijaniu tego projektu. Jeśli jesteś entuzjastą Formuły 1, programistą, projektantem graficznym lub testerem, możesz wnosić swój wkład poprzez:
+## Contribution to the project
+We will be grateful for any support in developing this project. If you are a Formula 1 enthusiast, programmer, graphic designer or tester, you can contribute by:
 
-Raportowanie błędów lub zgłaszanie sugestii w zakładce "Issues".
-Współtworzenie kodu poprzez "Pull Requests".
-Pomoc w rozbudowie i aktualizacji bazy danych.
-Testowanie i zgłaszanie uwag dotyczących działania strony.
-Zachęcamy do aktywnego udziału w projekcie i dołączenia do naszej społeczności fanów Formuły 1!
+Report errors or suggestion errors in the "Issues" entry.
+Co-authoring code via "Pull Requests".
+Assistance in expanding and updating the database.
+Testing and consideration of site performance feedback.
+participating in participating in the organization and joining our community of Formula 1 fans!
 
-## Licencja
-Ten projekt jest licencjonowany na zasadach MIT License.
-
+## License
+This project is licensed under the MIT License.
