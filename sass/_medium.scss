@@ -1,0 +1,371 @@
+@use "colors" as *;
+@use "mixins" as *;
+@use "reset" as *;
+@use "sizes" as *;
+
+@media (min-width: 768px) {
+  .nav {
+    .nav__menu {
+      display: none;
+    }
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2em;
+      color: rgb(253, 253, 253);
+      font-size: 2.5rem;
+    }
+
+    &__logo-img {
+      width: 40px;
+    }
+
+    &__links {
+      flex-direction: row;
+      position: unset;
+      top: unset;
+      height: unset;
+      width: unset;
+      background-color: unset;
+      transform: unset;
+    }
+
+    &__link {
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $main;
+      }
+    }
+
+    &__basket {
+      font-size: 2.5rem;
+    }
+
+    &__quantity {
+      top: -7px;
+      width: 22px;
+      height: 22px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .header {
+    &:hover .header__arrow {
+      opacity: 1;
+    }
+
+    &__img {
+      flex-direction: row;
+      gap: 0;
+    }
+
+    &__cars {
+      max-width: 600px;
+    }
+
+    &__content {
+      padding-left: 4em;
+      align-items: start;
+    }
+
+    &__heading {
+      text-align: left;
+      width: 300px;
+      font-size: 4.7rem;
+    }
+
+    &__text {
+      font-size: 4.5rem;
+    }
+
+    &__btn {
+      position: relative;
+      overflow: hidden;
+      @include glassHover;
+    }
+
+    &__arrow {
+      opacity: 0;
+      transition: 0.6s;
+
+      &:hover {
+        color: #f9fafa;
+      }
+    }
+
+    &__arrow-left {
+      margin-left: 0.6em;
+    }
+
+    &__arrow-right {
+      margin-right: 0.6em;
+    }
+  }
+
+  .collection {
+    flex-direction: row;
+    gap: 1em;
+
+    &__btn {
+      @include glassHover;
+      position: relative;
+      transition: 0.4s;
+      overflow: hidden;
+    }
+  }
+
+  .slider {
+    padding: 4em 0;
+
+    &__heading {
+      font-size: 4rem;
+    }
+
+    &__box {
+      margin-bottom: 2em;
+    }
+
+    &__content {
+      &:hover .slider__img {
+        transform: scale(1.07);
+      }
+    }
+
+    &__img {
+      transition: transform 0.3s ease-in;
+    }
+
+    &__btn {
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0d464a;
+      }
+    }
+
+    &__left,
+    &__right {
+      visibility: visible;
+      font-size: 2rem;
+      padding-right: 0.7em;
+      cursor: pointer;
+    }
+  }
+
+  .cars {
+    &__heading {
+      font-size: 4rem;
+      margin-bottom: 1em;
+    }
+
+    &__transition {
+      opacity: 0.5;
+      transform: scale(0.8);
+      animation: fadeInAndScale 0.3s ease-in-out forwards;
+    }
+
+    &__filter-btn {
+      padding: 0.7em 2em;
+      font-size: 1.4rem;
+    }
+
+    &__box {
+      &:hover .cars__img {
+        transform: scale(1.1);
+      }
+    }
+
+    &__buttons {
+      flex-direction: row;
+      gap: 0.5em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__btn-view {
+      @include glassHover;
+    }
+
+    &__btn {
+      @include glassHover;
+      overflow: hidden;
+    }
+
+    @keyframes fadeInAndScale {
+      0% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .offer {
+    @include flexCenter(row);
+
+    &__body {
+      flex-direction: row;
+    }
+
+    &__content {
+      align-items: start;
+    }
+
+    &__title {
+      text-align: start;
+      font-size: 5rem;
+    }
+
+    &__text {
+      max-width: 400px;
+      text-align: start;
+    }
+
+    &__btn {
+      padding: 0.7em 2em;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ac7d26;
+      }
+    }
+  }
+
+  .service {
+    padding: 5em 0;
+
+    &__content {
+      flex-direction: row;
+    }
+
+    &__img {
+      transition: transform 0.3s ease;
+    }
+
+    &__box {
+      &:hover .service__img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .contact {
+    &__body {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+    }
+
+    &__content-icons,
+    &__media-icon {
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $main;
+      }
+    }
+
+    &__content-title {
+      text-align: start;
+    }
+
+    &__content-open {
+      &:hover {
+        color: unset;
+        cursor: auto;
+      }
+    }
+  }
+
+  .product {
+    max-width: 700px;
+
+    &__body {
+      flex-direction: row;
+      gap: 2em;
+      padding-bottom: unset;
+    }
+
+    &__content {
+      gap: 1.2em;
+    }
+
+    &__box {
+      display: flex;
+      align-items: center;
+      height: 350px;
+    }
+
+    &__icon {
+      visibility: visible;
+      position: absolute;
+      right: 5px;
+      padding: 0.2em;
+      top: 10px;
+      z-index: 9;
+      color: rgb(150, 147, 147);
+    }
+
+    &__img {
+      padding: unset;
+    }
+
+    &__close {
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: #000000;
+        color: $white;
+      }
+    }
+
+    &__button {
+      position: relative;
+      overflow: hidden;
+      @include glassHover;
+      cursor: pointer;
+    }
+
+    &__view-more {
+      transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+      &:hover {
+        background-color: #104d52;
+        color: #f9fafa;
+        border: 1px solid transparent;
+      }
+    }
+
+    &__zoom {
+      cursor: zoom-in;
+      transform: scale(2);
+    }
+  }
+
+  .cookie {
+    &__btn {
+      transition: background-color 0.3s ease, color 0.3s ease;
+      &:hover {
+        background-color: $white;
+        color: #000000;
+      }
+    }
+
+    &__box {
+      max-width: 700px;
+    }
+
+    &__content {
+      flex-direction: row;
+      align-items: start;
+    }
+  }
+}

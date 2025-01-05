@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover our collection of athletic shoes that not only elevate your style but also enhance your comfort during physical activities. Add exceptional sports footwear to your cart and indulge in top-notch quality and design. Our shoes deliver unparalleled performance and durability, no matter your favorite sport. " />
+    <meta
+      name="keywords"
+      content="athletic shoes, performance, durability, design" />
+    <meta name="author" content="Krystian Ptak" />
+    <meta name="copyright" content="Krystian Ptak" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
+    <title>F1Zone</title>
+    <link rel="stylesheet" href="css/cart.css" />
+    <script
+      src="https://kit.fontawesome.com/fdc09ecfc9.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__body container">
+        <div class="nav__menu">
+          <div class="nav__open"><i class="fa-solid fa-bars"></i></div>
+          <div class="nav__close nav__hide">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <a href="index.html">
+          <div class="nav__logo">
+            <img src="img/logo.png" class="nav__logo-img" />
+            <p>F1Zone</p>
+          </div>
+        </a>
+        <div class="nav__links">
+          <a class="nav__link" href="index.html">home</a>
+          <a class="nav__link" href="index.html#cars_id">products</a>
+          <a class="nav__link" href="#contact">contact</a>
+        </div>
+        <div class="nav__items">
+          <div class="nav__shop">
+            <a href="cart.html">
+              <i class="nav__basket fa-solid fa-basket-shopping">
+                <span class="nav__quantity"></span>
+              </i>
+            </a>
+            <span class="nav__total"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <h2 class="cart__heading">Shopping Cart</h2>
+      <section class="cart">
+        <div class="cart__wrapper">
+          <table class="cart__table">
+            <tr class="cart__table-titles">
+              <th>Product</th>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+            <tbody class="cart__table_tr"></tbody>
+          </table>
+          <div class="cart__box">
+            <a href="index.html#cars_id"
+              ><button class="cart__continue">
+                <i class="fa-solid fa-chevron-left"></i> Continue shopping
+              </button></a
+            >
+            <p class="cart__total-price"></p>
+          </div>
+        </div>
+
+        <div class="payment">
+          <h2 class="payment__title">Personal Information</h2>
+          <label class="payment__label">Name and Surname</label>
+          <input type="text" placeholder="John Doe" class="payment__input" />
+          <label class="payment__label">Phone Number</label>
+          <input type="text" placeholder="+1 234 5678" class="payment__input" />
+          <label class="payment__label">Address</label>
+          <input
+            type="text"
+            placeholder="Elton St 21 22-145"
+            class="payment__input" />
+          <h2 class="payment__title">Card Information</h2>
+          <div class="payment__icons">
+            <img src="./img/visa.webp" alt="" class="payment__icon" />
+            <img src="./img/master.webp" alt="" class="payment__icon" />
+          </div>
+          <input
+            type="password"
+            class="payment__input"
+            placeholder="Card Number" />
+          <div class="payment__Info">
+            <input
+              type="text"
+              placeholder="mm"
+              class="payment__input payment__input-date" />
+            <input
+              type="text"
+              placeholder="yyyy"
+              class="payment__input payment__input-date" />
+            <input
+              type="text"
+              placeholder="cvv"
+              class="payment__input payment__input-date" />
+          </div>
+          <p class="payment__message"></p>
+          <button class="payment__button">Checkout!</button>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact__body container">
+          <div class="contact__logo">
+            <a href="index.html">
+              <div class="contact__logo-title">
+                <img src="img/logo.png" class="contact__logo-img" />
+                <p>F1Zone</p>
+              </div>
+            </a>
+            <p class="contact__logo-text">
+              Explore our exclusive collection of F1 posters, capturing the
+              thrill and elegance of motorsport.
+            </p>
+          </div>
+          <div class="contact__media">
+            <p class="contact__media-title">follow us on__</p>
+            <div>
+              <i class="contact__media-icon fa-brands fa-facebook"></i>
+              <i class="contact__media-icon fa-brands fa-instagram"></i>
+              <i class="contact__media-icon fa-brands fa-x-twitter"></i>
+            </div>
+          </div>
+          <div class="contact__content">
+            <p class="contact__content-title">Contact Us</p>
+            <a
+              class="contact__content-icons"
+              href="https://goo.gl/maps/1JDQsq28KFfbreKc8"
+              target="_blank"
+              ><i class="contact__content-icon fa-solid fa-location-dot"></i>94
+              Warszawa, Polska</a
+            >
+            <a class="contact__content-icons" href="mailto:F1Zone@gmail.com"
+              ><i class="contact__content-icon fa-solid fa-envelope"></i
+              >F1Zone@gmail.com</a
+            >
+            <p class="contact__message-mail">Email has been copied</p>
+            <a class="contact__content-icons" href="tel:12123123123"
+              ><i class="contact__content-icon fa-solid fa-phone"></i>+12 123
+              123 123</a
+            >
+            <p class="contact__message-tel"></p>
+            <span class="contact__content-icons contact__content-open"
+              ><i class="contact__content-icon fa-solid fa-clock"></i>Mon-Sat
+              8:00am - 8:00pm</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">
+        © <span class="footer__date"></span> F1Zone | All rights reserved
+      </p>
+    </footer>
+
+    <script src="js/footer.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

@@ -1,302 +1,297 @@
 <!DOCTYPE html>
-
-<head>
-    <title>F1 - WEBSITE PROJEKT</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="img/png" href="img/m_logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f5f5f5;
-            font-family: 'Rajdhani', sans-serif;
-            line-height: 1.6;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-        /* Dodaj własne style i animacje */
-        #tooltip .icon {
-            margin: 0 10px;
-            color: #334;
-            background-color: #ddd;
-            border-radius: 50%;
-            padding: 10px;
-        }
-
-        .icon {
-            width: 5px;
-            height: 50px;
-            background-color: blue;
-            transition: transform .2s;
-        }
-
-        .icon:hover {
-            transform: scale(1.2);
-        }
-        .icon {
-            margin: 10px;
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo img {
-            width: 40px;
-        }
-        .logo {
-            width: 40px;
-            height: 40px;
-            transition: transform .2s;
-        }
-
-        .logo:hover {
-              transform: scale(0.8);
-        }
-        nav {
-                background-color: #222;
-                padding: 10px 0;
-                text-align: center;
-            }
-
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-            nav ul li {
-                display: inline;
-                margin: 0 15px;
-            }
-
-            nav ul li a {
-                font-size: 18px;
-                font-weight: bold;
-                text-decoration: none;
-                color: #ccc;
-                transition: color 0.3s, border-bottom-color 0.3s;
-                border-bottom: 2px solid transparent;
-                position: relative;
-            }
-
-            nav ul li a:before {
-                content: "";
-                position: absolute;
-                width: 0;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: #fff;
-                visibility: hidden;
-                transition: all 0.3s ease-in-out;
-            }
-
-            nav ul li a:hover {
-                color: #fff;
-                border-bottom-color: #fff;
-            }
-    
-            nav ul li a:hover:before {
-                visibility: visible;
-                width: 100%;
-            }
-
-            nav ul li a.active {
-                color: #fff;
-                border-bottom-color: #fff;
-            }
-        .nav {
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .nav:hover {
-            transform: translateY(-3px);
-        }
-        .header {
-            background-image: url('image/photo13.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .header__text {
-            font-size: 2.5rem;
-            color: #fff;
-            margin-bottom: 1rem;
-            transition: transform .2s;
-        }
-        .header__text:hover {
-              transform: scale(0.8);
-        }    
-        .header__text--colorized {
-            color: #f55;
-            font-weight: bold;
-        }
-        .header__cta {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2rem;
-            background-color: #f55;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            transition: transform .2s;
-        }
-        .header__cta:hover {
-              transform: scale(1.2);
-        }
-        .section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .section__heading {
-            font-size: 2rem;
-            color: #f55;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .section__heading:hover {
-            transform: scale(1.2);
-        }
-        .about-us__textbox {
-            max-width: 600px;
-            margin: 0 auto;
-        }    
-        .about-us__text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-            color: #333;
-            transition: transform .2s;
-        }
-        .about-us__test:hover {
-              transform: scale(1.2);
-        }
-        .about-us__link {
-            color: #f55;
-            text-decoration: underline;
-            transition: transform .2s;
-        }
-        .about-us__link:hover {
-              transform: scale(1.2);
-        }
-        .about-us__box {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 2rem;
-            transition: transform .2s;
-        }
-        .about-us__box:hover {
-              transform: scale(1.2);
-        }
-        .about-us__img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-        }
-        .footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 2rem;
-        }
-        .footer__text {
-            font-size: 1rem;
-            color: #fff;
-        }
-        .footer__link {
-            color: #f55;
-            text-decoration: underline;
-        }
-        .section__heading, .about-us__text, .about-us__img {
-            transition: transform 0.3s ease;
-        }
-
-        .section__heading:hover, .about-us__text:hover, .about-us__img:hover {
-            transform: scale(1.1);
-        }
-    </style>
-</head>
-
-<body>
-    <div class="navbar">
-        <a href="/" class="logo"><img src="image/logof1.png" alt="Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="/" class="nav__item">Strona główna</a></li>
-                <li><a href="/aktualności" class="nav__item">aktualności</a></li>
-                <li><a href="/wyścigi" class="nav__item">wyścigi</a></li>
-                <li><a href="/klasyfikacja" class="nav__item">Klasyfikacja</a></li>
-                <li><a href="/tory" class="nav__item">Tory</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="header">
-        <div class="header__title">
-            <p class="header__text">Adaptuj się z <span
-                    class="header__text--colorized">w
-                    najlepszymi</span>
-            </p>
-            <a href="/f1" class="header__cta">F1!</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore our exclusive collection of F1 merchandise, including team apparel, collectible items, and racing accessories. Whether you're a fan of Red Bull, Ferrari, or Mercedes, find top-quality products that bring the thrill of Formula 1 closer to you. Shop now for official F1 gear and unique memorabilia!" />
+    <meta
+      name="keywords"
+      content="F1 merchandise, Formula 1 gear, racing collectibles, team apparel, F1 accessories, Red Bull, Ferrari, Mercedes" />
+    <meta name="author" content="Dawid Olko" />
+    <meta name="copyright" content="Dawid Olko" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
+    <title>F1Zone</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/fdc09ecfc9.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__body container">
+        <div class="nav__menu">
+          <div class="nav__open"><i class="fa-solid fa-bars"></i></div>
+          <div class="nav__close nav__hide">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
         </div>
+        <a href="#">
+          <div class="nav__logo">
+            <img src="img/logo.png" class="nav__logo-img" alt="logo image" />
+            <p>F1Zone</p>
+          </div>
+        </a>
+        <div class="nav__links">
+          <a class="nav__link" href="#">home</a>
+          <a class="nav__link" href="#cars_id">products</a>
+          <a class="nav__link" href="#contact">contact</a>
+        </div>
+        <div class="nav__items">
+          <div class="nav__shop">
+            <a href="cart.html">
+              <i class="nav__basket fa-solid fa-basket-shopping">
+                <span class="nav__quantity"></span>
+              </i>
+            </a>
+            <span class="nav__total"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="basket">
+      <p class="basket__message"></p>
     </div>
+
+    <div class="cart__wrapper">
+      <table class="cart__table">
+        <tbody class="cart__table_tr"></tbody>
+      </table>
+      <p class="cart__total-price">Total:</p>
+      <button class="payment__button"></button>
+    </div>
+
+    <header class="header">
+      <i class="header__arrow header__arrow-left fa-solid fa-chevron-left"></i>
+      <i class="header__arrow header__arrow-right fa-solid fa-chevron-right"></i
+      >>
+    </header>
 
     <main>
-        <section class="section about-us">
-            <h2 class="section__heading">Formula 1</h2>
-            <div class="about-us__textbox">
-                <p class="about-us__text">Formuła 1 to najwyższa klasa wyścigów samochodowych na świecie. Organizuje międzynarodową serię wyścigów na torach rundowych
-                    na różnych kontynentach. W tych zawodach rywalizują najbardziej utalentowani kierowcy z największymi producentami samochodów. Formuła 1 jest znana
-                    z ekscytujących prędkości, zaawansowanej technologii i dynamicznych zmagań na torze, co przyciąga miliony fanów z całego świata.</p>
-                <a href="/zespoły" class="about-us__text about-us__link">Zespoły!</a>
+      <section class="collection">
+        <div class="collection__tracks">
+          <h3 class="collection__heading">Tracks Collection</h3>
+          <div class="collection__shadow">
+            <img
+              src="img/tracks-collection.jpg"
+              alt="tracks collection"
+              class="collection__img" />
+          </div>
+          <a class="collection__btn" href="#cars_id">explore more</a>
+        </div>
+        <div class="collection__teams">
+          <h3 class="collection__heading">Teams Collection</h3>
+          <div class="collection__shadow">
+            <img
+              src="img/teams-collection.jpg"
+              alt="teams collection"
+              class="collection__img" />
+          </div>
+          <a class="collection__btn" href="#cars_id">explore more</a>
+        </div>
+        <div class="collection__drivers">
+          <h3 class="collection__heading">Drivers Collection</h3>
+          <div class="collection__shadow">
+            <img
+              src="img/drivers-collection.jpg"
+              alt="drivers collection"
+              class="collection__img" />
+          </div>
+          <a class="collection__btn" href="#cars_id">explore more</a>
+        </div>
+      </section>
+
+      <h2 class="slider__heading">Bestsellers Products</h2>
+
+      <section class="slider">
+        <i class="slider__left fas fa-arrow-left"></i>
+        <div class="slider__gallery"></div>
+        <i class="slider__right fas fa-arrow-right"></i>
+      </section>
+
+      <section class="cars" id="cars_id">
+        <h2 class="cars__heading">Posters Collection</h2>
+        <input
+          class="cars__search-input"
+          type="search"
+          id="search-input"
+          placeholder="Wyszukaj produkt" />
+        <div class="cars__body">
+          <button
+            class="cars__filter-btn cars__active cars__filter-all"
+            data-category="All">
+            All
+          </button>
+          <button
+            class="cars__filter-btn cars__filter-mwk"
+            data-category="tracks">
+            Tracks
+          </button>
+          <button
+            class="cars__filter-btn cars__filter-mwk"
+            data-category="Teams">
+            Teams
+          </button>
+          <button
+            class="cars__filter-btn cars__filter-mwk"
+            data-category="drivers">
+            Drivers
+          </button>
+          <i class="cars__search-icon fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="product-section__products cars__products"></div>
+        <button class="product__view-more"></button>
+      </section>
+
+      <div class="product__bgc">
+        <div class="product"></div>
+      </div>
+
+      <section class="offer">
+        <div class="offer__body container">
+          <div class="offer__content container">
+            <p class="offer__heading">SPECIAL OFFER</p>
+            <p class="offer__title">UP TO 70% OFF</p>
+            <p class="offer__text">
+              Upgrade your space with our exclusive posters! Enjoy up to 70% off
+              on stunning F1-themed wall art and save big while transforming
+              your walls.
+            </p>
+            <a href="#cars_id" class="offer__btn">SHOP NOW</a>
+          </div>
+          <img
+            src="img/logo.png"
+            alt="drivers collection posters"
+            class="offer__img" />
+        </div>
+      </section>
+
+      <section class="service">
+        <div class="service__content container">
+          <div class="service__box">
+            <img
+              src="img/truck-delivery.webp"
+              alt="delivery truck icon"
+              class="service__img service__truck" />
+            <div class="service__text">
+              <h4 class="service__title">FREE SHIPING</h4>
+              <p class="service__describe">All orders over $150</p>
             </div>
-    
-            <div class="about-us__box">
-                <img src="image/photo6.jpg" alt="ciąg bolidów"
-                    class="about-us__img about-us__img--desktop">
-                <img src="image/photo11.jpg" alt="bolid z 2022 merc"
-                    class="about-us__img">
-                <img src="image/photo12.jpg" alt="f1" class="about-us__img">
+          </div>
+          <div class="service__box">
+            <img
+              src="img/credit-card.webp"
+              alt="credit cart icon"
+              class="service__img" />
+            <div class="service__text">
+              <h4 class="service__title">QUICK PAYMENT</h4>
+              <p class="service__describe">100% secure payment</p>
             </div>
-        </section>
+          </div>
+          <div class="service__box">
+            <img
+              src="img/receipt-refund.webp"
+              alt="return arrow icon"
+              class="service__img service__return" />
+            <div class="service__text">
+              <h4 class="service__title">FREE RETURNS</h4>
+              <p class="service__describe">Money back in 30 days</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact__body container">
+          <div class="contact__logo">
+            <a href="#">
+              <div class="contact__logo-title">
+                <img
+                  src="img/logo.png"
+                  class="contact__logo-img"
+                  alt="logo image" />
+                <p>F1Zone</p>
+              </div>
+            </a>
+            <p class="contact__logo-text">
+              Explore our diverse collection of F1 posters, designed to match
+              every style and passion for motorsport.
+            </p>
+          </div>
+          <div class="contact__media">
+            <p class="contact__media-title">follow us on__</p>
+            <div>
+              <i class="contact__media-icon fa-brands fa-facebook"></i>
+              <i class="contact__media-icon fa-brands fa-instagram"></i>
+              <i class="contact__media-icon fa-brands fa-x-twitter"></i>
+            </div>
+          </div>
+          <div class="contact__content">
+            <p class="contact__content-title">Contact Us</p>
+            <a
+              class="contact__content-icons"
+              href="https://goo.gl/maps/1JDQsq28KFfbreKc8"
+              target="_blank"
+              ><i class="contact__content-icon fa-solid fa-location-dot"></i>94
+              Warszawa, Polska</a
+            >
+            <a class="contact__content-icons" href="mailto:F1Zone@gmail.com"
+              ><i class="contact__content-icon fa-solid fa-envelope"></i
+              >F1Zone@gmail.com</a
+            >
+            <p class="contact__message-mail">Email has been copied</p>
+            <a class="contact__content-icons" href="tel:12123123123"
+              ><i class="contact__content-icon fa-solid fa-phone"></i>+12 123
+              123 123</a
+            >
+            <p class="contact__message-tel"></p>
+            <span class="contact__content-icons contact__content-open"
+              ><i class="contact__content-icon fa-solid fa-clock"></i>Mon-Sat
+              8:00am - 8:00pm</span
+            >
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="footer__icons">
-            <a href="#" class="footer__icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="footer__icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="footer__icon"><i class="fab fa-twitter"></i></a>
-        <p class="footer__text">All rights reserved &copy; 2023 F1 Website | <a href="/privacy"
-                class="footer__link">Privacy Policy</a></p>
+      <p class="footer__text">
+        © <span class="footer__date"></span> F1Zone | All rights reserved.
+      </p>
     </footer>
-</body>
 
+    <div class="cookie">
+      <div class="cookie__box container">
+        <p class="cookie__title">
+          <span class="cookie__img">🍪</span> We use cookie filles
+        </p>
+        <div class="cookie__content">
+          <p class="cookie__text">
+            This website uses cookies to enhance your browsing experience. By
+            clicking "Accept," you consent to their use. For more information,
+            please refer to our Privacy Policy.
+          </p>
+          <button class="cookie__btn">Accept</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/footer.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+  </body>
 </html>
